@@ -22,6 +22,7 @@ public class OrderStatusScheduler {
     // 스프링 스케줄링 어노테이션 - 특정 주기마다 메서드를 실행하도록 함
     // 초, 분, 시, 일, 월, 요일
     // 0초 0분 0시, 매일, 매월, 특정요일 무관 == 매일 자정에 실행된다
+    //커밋테스트
     @Scheduled(cron = "0 0 0 * * ?")
     @Transactional
     public void cancelUnpaidOrders(){ // 미결제 주문 취소
